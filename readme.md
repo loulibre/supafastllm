@@ -4,7 +4,7 @@ Deploy a self-hosted [Supabase](https://github.com/supabase/supabase) instance w
 
 When using nginx, this project leverages [docker-nginx-certbot](https://github.com/JonasAlfredsson/docker-nginx-certbot) image which handles requesting and renewing SSL certificates automatically.
 
-👉 If you find this project helpful, please consider leaving a ⭐ to show your support. You can also support the work by [Buying a coffee](https://buymeacoffee.com/_inder1). Thankyou!
+👉 If you find this project helpful, please consider leaving a ⭐ to show your support. 
 
 ## Prerequisites
 
