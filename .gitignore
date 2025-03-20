@@ -1,0 +1,366 @@
+scripts/remote
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+*/venv/
+**/venv/
+.venv/
+ENV/
+env/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Docker
+.docker/
+docker-compose.override.yml
+volumes/
+**/volumes/
+**/data/
+*.sqlite
+*.pem
+*.key
+*.crt
+*.log
+*.conf
+
+# Logs
+*.log
+logs/
+log/
+
+# Database
+*.sqlite3
+*.db
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Local development settings
+local_settings.py
+
+# Media files
+media/
+uploads/
+
+# Static files
+static/
+staticfiles/
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Database files
+*.sqlite3
+pg_*
+postmaster.*
+
+# Certificates and keys
+*.key
+*.crt
+*.pem
+*.cert
+*.ca-bundle
+*.chain
+*.csr
+*.der
+*.p12
+*.pfx
+*.srl
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node modules and npm files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Docker volumes and data
+docker/volumes/
+**/docker/volumes/
+volumes/
+**/volumes/
+
+# Database files and directories
+**/db/data/
+**/data/
+**/pg_*/
+**/postmaster.*
+**/*.fsm
+**/*.vm
+**/base/
+**/global/
+
+# Certificates and keys
+**/*.key
+**/*.crt
+**/*.pem
+**/*.cert
+**/*.ca-bundle
+**/*.chain
+**/*.csr
+**/*.der
+**/*.p12
+**/*.pfx
+**/*.srl
+**/letsencrypt/
+**/accounts/
+**/archive/
+**/live/
+**/renewal/
+**/credentials/
+**/dhparams/
+
+# Logs and temporary files
+**/*.log
+**/*.tmp
+**/logs/
+**/proxy_host/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+database.sqlite
+
+# Nginx files
+**/nginx.conf
+**/nginx.conf.backup
+**/nginx.template
+**/proxy_host/
+**/snippets/
+
+# NPM files
+**/npm/data/
+**/npm/letsencrypt/
+
+# Supabase files
+**/supabase/
+**/storage/
+**/functions/
+**/api/
+**/auth/
+**/realtime/
+**/pooler/
+
+# JWT and authentication
+**/*.jwt
+**/*.token
+**/auth_tokens/
+**/jwt_keys/
+**/oauth/
+**/tokens/
+
+# SSL/TLS
+**/*.ssl
+**/*.tls
+**/ssl/
+**/tls/
+**/.well-known/
+**/certbot/
+**/certificates/
+
+# Private keys and sensitive information
+**/*private*.key
+**/*private*.pem
+**/*.rsa
+**/*.ecdsa
+**/*.ed25519
+**/*.secret
+**/*.password
+**/*.keystore
+**/*.jks
+**/*.p8
+**/*.pkcs8
+**/*.pkcs12
+**/*id_rsa*
+**/*id_ed25519*
+**/*id_ecdsa*
+**/*.key.json
+**/private_key.json
+**/credentials.json
+**/secrets.json
+**/.secret*
+**/.credentials
+**/.private
+**/private/
+**/secrets/
+**/credentials/
