@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupaFast LLM</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            display: none;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to SupaFast LLM</h1>
+    
+    <div class="container">
+        <h2>Python Script Demo</h2>
+        <button onclick="runPythonScript()">Run Hello World</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Initialize Supabase client
+        const supabase = supabase.createClient(
+            window.location.origin,
+            'your-anon-key' // This will be replaced by the actual anon key
+        );
+
+        async function runPythonScript() {
+            try {
+                // Get the current session
+                const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+                
+                if (sessionError) throw sessionError;
+                if (!session) {
+                    throw new Error('Please log in to use this feature');
+                }
+
+                // Get the access token
+                const accessToken = session.access_token;
+
+                // Call the Python script endpoint
+                const response = await fetch('/api/v1/hello', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to run Python script');
+                }
+
+                const data = await response.json();
+                
+                // Display the result
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                    <p class="success">${data.message}</p>
+                `;
+            } catch (error) {
+                // Handle errors
+                const resultDiv = document.getElementById('result');
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                    <p class="error">Error: ${error.message}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html> 
